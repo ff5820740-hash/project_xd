@@ -103,3 +103,22 @@ def jogar():
 
         vez = 1 - vez
         # Alterna a vez entre os dois jogadores
+
+def mostrar_regras():
+    print(" === REGRAS DO JOGO ===")
+    print("Dois jogadores participam.")
+    print("O Jogador X começa.")
+    print("Cada jogador escolhe uma linha e uma coluna.")
+    print("Vence quem formar uma linha de trÊs símbolos iguais.")
+    print("Se o tabuleiro ficar cheio, ocorre empate.")
+
+def mostrar_placar(placar):
+        print(" === PLACAS ===")
+        print("Jogador X:", placar["X"], "vitórias")
+        print("Jogador O:", placar["O"], "vitórias")
+        print("Empates:", placar["E"])
+
+def mostrar_historico(historico):
+    print(" === HISTÓRICO ===")
+
+    if len
