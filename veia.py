@@ -85,4 +85,21 @@ def jogar():
 
         posicao = (linha, coluna)
 
-        if posicao in casas_usa
+        if posicao in casas_usadas:
+            print("Essa casa já está ocupadíssima!")
+            continue
+        casas_usadas.add(posicao)
+        tabuleiro[linha][coluna] = jogador
+
+        if verificar_vitoria(tabuleiro, jogador):
+            mostrar_tabuleiro(tabuleiro)
+            print("Jogador", jogador, "venceu!")
+            return jogador
+
+        if verificar_empate(tabuleiro):
+            mostrar_tabuleiro(tabuleiro)
+            print("A partida terminou em empate!")
+            return "E"
+
+        vez = 1 - vez
+        # Alterna a vez entre os dois jogadores
