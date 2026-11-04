@@ -66,3 +66,23 @@ def verificar_empate(tabuleiro):
                 return False
 
     return True
+
+def jogar():
+    tabuleiro = criar_tabuleiro()
+    jogadores = ("X", "O")
+    casas_usadas = set()
+    vez = 0
+
+    while True:
+        mostrar_tabuleiro(tabuleiro)
+
+        jogador = jogadores[vez]
+
+        print("Vez do Jogador:", jogador)
+
+        linha = ler_posicao("Escolha a linha (1-3): ")
+        coluna = ler_posicao("Escolha a coluna (1-3): ")
+
+        posicao = (linha, coluna)
+
+        if posicao in casas_usa
