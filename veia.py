@@ -121,4 +121,31 @@ def mostrar_placar(placar):
 def mostrar_historico(historico):
     print(" === HISTÓRICO ===")
 
-    if len
+    if len(historico) == 0:
+        print("Nenhuma partida foi realizada.")
+    else:
+        for i in range(len(historico)):
+            print("Partida", i + 1, ":", historico[i])
+
+
+def menu():
+    placar = {"X": 0, "O": 0, "E": 0}
+    historico = []
+
+    while True:
+        print(" ==== JOGUI DA VEIA ====")
+        print(" 1 - Jogar")
+        print("2 - Regras")
+        print("3 - Placar")
+        print("4 - Histórico")
+        print("5 - Sair")
+
+        opcao = input("Escolha uma opção: ").strip()
+
+        if opcao == "1":
+            resultado = jogar()
+            placar[resultado] += 1
+            historico.append(resultado)
+
+        elif opcao == "2":
+            mostrar_regras()    
